@@ -6,21 +6,21 @@ import * as tasksControllers from "./tasks.controllers.js"
 const taskRouter = Router();
 
 taskRouter.post('/create/:id',
-    authenticate,
+    errorHandler(authenticate),
     errorHandler(tasksControllers.createTask)
 )
 
 taskRouter.get('/get',
-    authenticate,
+    errorHandler(authenticate),
     errorHandler(tasksControllers.getPrivateTasks)
 )
 
 taskRouter.delete('/delete/:id',
-    authenticate,
+    errorHandler(authenticate),
    errorHandler(tasksControllers.deleteTask)
 )
 taskRouter.put('/update/:id',
-    authenticate,
+    errorHandler(authenticate),
     errorHandler(tasksControllers.updateTask)
 )
 

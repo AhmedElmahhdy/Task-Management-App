@@ -6,22 +6,22 @@ import * as categoriesControllers from "./categories.controllers.js"
 const categoriesRouter = Router();
 
 categoriesRouter.post('/create',
-   authenticate,
+    errorHandler(authenticate),
    errorHandler(categoriesControllers.createCategory)   
 )
 
 categoriesRouter.get('/get',
-    authenticate,
+    errorHandler(authenticate),
     errorHandler(categoriesControllers.getCategories)
 )
 
 categoriesRouter.put('/update/:id',
-    authenticate,
+    errorHandler(authenticate),
     errorHandler(categoriesControllers.updateCategory)
 )
 
 categoriesRouter.delete('/delete/:id',
-    authenticate,
+    errorHandler(authenticate),
    errorHandler(categoriesControllers.deleteCategory)
 )
 

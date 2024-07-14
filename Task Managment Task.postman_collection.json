@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "b01867be-2d7e-43cd-9362-9cfa31ddfe1c",
+		"name": "Task Managment Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34113326"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "add user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Ahmed Alaa\",\r\n    \"email\":\"ahmedalaa15100@gmail.com\",\r\n    \"password\":\"ahmed2013\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/add",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "log in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ahmedalaa151002@gmail.com\",\r\n    \"password\":\"ahmed2013\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Task-Management-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGZlYjQ2YWM4NjQwMjgwOGM4ZjIxMiIsImlhdCI6MTcyMDk0MzA0OSwiZXhwIjoxNzIxMDI5NDQ5fQ.NCAuu4UHL6qsf0vktB2Umjaohx3_Bc2hwo-jfbMF8zc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Not-Impotant\",\r\n    \"description\":\"This category cotain not impotant taskes \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/categories/create",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"categories",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Task-Management-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGZlYjQ2YWM4NjQwMjgwOGM4ZjIxMiIsImlhdCI6MTcyMDg0OTMwNCwiZXhwIjoxNzIwOTM1NzA0fQ.2qKwO9SIbKqrlcLUZz_-1n0PVEGQNVVDvHdv7yx-A4Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/categories/get",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"categories",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Task-Management-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGZlYjQ2YWM4NjQwMjgwOGM4ZjIxMiIsImlhdCI6MTcyMDg0OTMwNCwiZXhwIjoxNzIwOTM1NzA0fQ.2qKwO9SIbKqrlcLUZz_-1n0PVEGQNVVDvHdv7yx-A4Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Impotanttttttttttt\",\r\n    \"description\":\"This category cotain impotant taskessssssssssss \"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/categories/update/668feecea09ccaff91cc305f",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"categories",
+								"update",
+								"668feecea09ccaff91cc305f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "Task-Management-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGZlYjQ2YWM4NjQwMjgwOGM4ZjIxMiIsImlhdCI6MTcyMDg0OTMwNCwiZXhwIjoxNzIwOTM1NzA0fQ.2qKwO9SIbKqrlcLUZz_-1n0PVEGQNVVDvHdv7yx-A4Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/categories/delete/668feecea09ccaff91cc305f",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"categories",
+								"delete",
+								"668feecea09ccaff91cc305f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Task-Management-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGZlYjQ2YWM4NjQwMjgwOGM4ZjIxMiIsImlhdCI6MTcyMDk0MzA0OSwiZXhwIjoxNzIxMDI5NDQ5fQ.NCAuu4UHL6qsf0vktB2Umjaohx3_Bc2hwo-jfbMF8zc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"play football\" ,\r\n     \"type\": \"text\", \r\n     \"textBody\":\"at 9 pm go to play football\" ,\r\n      \"visibility\":\"shared\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/tasks/create/669385673654dcf3286ba9e2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tasks",
+								"create",
+								"669385673654dcf3286ba9e2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Task-Management-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGZlYjQ2YWM4NjQwMjgwOGM4ZjIxMiIsImlhdCI6MTcyMDg0OTMwNCwiZXhwIjoxNzIwOTM1NzA0fQ.2qKwO9SIbKqrlcLUZz_-1n0PVEGQNVVDvHdv7yx-A4Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/tasks/get",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tasks",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "Task-Management-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGZlYjQ2YWM4NjQwMjgwOGM4ZjIxMiIsImlhdCI6MTcyMDg0OTMwNCwiZXhwIjoxNzIwOTM1NzA0fQ.2qKwO9SIbKqrlcLUZz_-1n0PVEGQNVVDvHdv7yx-A4Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/tasks/delete/66923488287b2b91612ccda6",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tasks",
+								"delete",
+								"66923488287b2b91612ccda6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "filter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Task-Management-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGZlYjQ2YWM4NjQwMjgwOGM4ZjIxMiIsImlhdCI6MTcyMDk0MzA0OSwiZXhwIjoxNzIxMDI5NDQ5fQ.NCAuu4UHL6qsf0vktB2Umjaohx3_Bc2hwo-jfbMF8zc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Impotant\",\r\n    \"visibility\":\"private\",\r\n    \"sortBy\":\"title\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/tasks/filter",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tasks",
+								"filter"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
